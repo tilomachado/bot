@@ -1,15 +1,36 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="pt">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Typebot Integration</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="Integração do Typebot para o quiz Open Mind">
+    <meta name="author" content="Tilo Machado">
+    <meta name="robots" content="index, follow">
+    <meta property="og:title" content="Quiz Open Mind">
+    <meta property="og:description" content="Teste seus conhecimentos com o quiz da Open Mind!">
+    <meta property="og:image" content="URL_DA_IMAGEM">
+    <meta property="og:url" content="URL_DO_SITE">
+    <meta name="twitter:card" content="summary_large_image">
+    <title>Integração Typebot - Open Mind</title>
+
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-GDDY8TGYQV"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-GDDY8TGYQV');
+    </script>
+
     <script type="module">
         import Typebot from 'https://cdn.jsdelivr.net/npm/@typebot.io/js@0.3/dist/web.js';
-        Typebot.initStandard({ typebot: "quiz-open-mind" });
+        document.addEventListener("DOMContentLoaded", () => {
+            Typebot.initStandard({ typebot: "quiz-open-mind" });
+        });
     </script>
 </head>
 <body>
-    <typebot-standard style="height: 100vh;"></typebot-standard>
+    <typebot-standard style="width: 100%; height: 100vh;"></typebot-standard>
 </body>
 </html>
