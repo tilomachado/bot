@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="pt">
 <head>
-       <meta charset="UTF-8">
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>100+ Receitas Moçambicanas - Oferta por Tempo Limitado!</title>
 
@@ -13,7 +13,7 @@
     <meta name="keywords" content="receitas moçambicanas, culinária africana, comida caseira, cozinha econômica, eBook de receitas, refeições saudáveis">
     <meta name="author" content="Tilo Machado e Belucha Joaquim Gregório">
 
-    <!-- Metatags para redes sociais (Facebook, WhatsApp, Twitter) -->
+    <!-- Metatags para redes sociais -->
     <meta property="og:title" content="100+ Receitas Moçambicanas - Oferta Exclusiva!">
     <meta property="og:description" content="Aprenda a cozinhar pratos incríveis e acessíveis com nosso eBook exclusivo. Garanta o seu agora!">
     <meta property="og:image" content="URL_DA_IMAGEM_DO_EBOOK">
@@ -26,7 +26,7 @@
     <meta name="twitter:description" content="Aprenda a preparar pratos deliciosos e econômicos com ingredientes fáceis de encontrar!">
     <meta name="twitter:image" content="URL_DA_IMAGEM_DO_EBOOK">
 
-    <!-- Código do Google Analytics -->
+    <!-- Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-GDDY8TGYQV"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
@@ -35,22 +35,24 @@
         gtag('config', 'G-GDDY8TGYQV');
     </script>
 
-    <!-- Código do Meta Pixel (Facebook Ads) -->
+    <!-- Meta Pixel (Facebook Ads) -->
     <script>
-    !function(f,b,e,v,n,t,s)
-    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-    n.queue=[];t=b.createElement(e);t.async=!0;
-    t.src=v;s=b.getElementsByTagName(e)[0];
-    s.parentNode.insertBefore(t,s)}(window, document,'script',
-    'https://connect.facebook.net/en_US/fbevents.js');
+    !function(f,b,e,v,n,t,s) {
+        if(f.fbq)return;n=f.fbq=function() {
+            n.callMethod? n.callMethod.apply(n,arguments):n.queue.push(arguments)
+        };
+        if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+        n.queue=[];t=b.createElement(e);t.async=!0;
+        t.src=v;s=b.getElementsByTagName(e)[0];
+        s.parentNode.insertBefore(t,s)
+    }(window, document,'script', 'https://connect.facebook.net/en_US/fbevents.js');
     fbq('init', '1709175810020560');
     fbq('track', 'PageView');
     </script>
-    <noscript><img height="1" width="1" style="display:none"
-    src="https://www.facebook.com/tr?id=1709175810020560&ev=PageView&noscript=1"
-    /></noscript>
+    <noscript>
+        <img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=1709175810020560&ev=PageView&noscript=1"/>
+    </noscript>
+
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -168,73 +170,69 @@
             border-radius: 8px;
             box-shadow: 0 4px 8px rgba(0,0,0,0.1);
         }
+        
+        /* Estilos do Player de Vídeo */
         .video-container {
-            margin: 30px 0;
-            text-align: center;
-        }
-        .video-container iframe {
+            position: relative;
+            width: 100%;
+            max-width: 800px;
+            margin: 20px auto;
             border-radius: 8px;
+            overflow: hidden;
             box-shadow: 0 4px 8px rgba(0,0,0,0.1);
         }
-           .video-container {
-  position: relative;
-  width: 100%;
-  max-width: 800px;
-  margin: 0 auto;
-}
-
-video {
-  width: 100%;
-  display: block;
-}
-
-.video-overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background: rgba(0,0,0,0.3);
-}
-
-.play-button {
-  width: 60px;
-  height: 60px;
-  border-radius: 50%;
-  background: rgba(230, 57, 70, 0.8);
-  border: none;
-  color: white;
-  font-size: 24px;
-  cursor: pointer;
-  transition: transform 0.2s;
-}
-
-.play-button:hover {
-  transform: scale(1.1);
-}
-
-.progress-container {
-  width: 100%;
-  height: 6px;
-  background: #f1f1f1;
-  margin-top: 10px;
-}
-
-.progress-bar {
-  height: 100%;
-  background: #e63946;
-  width: 0%;
-}
-
-.timer-display {
-  text-align: center;
-  margin-top: 5px;
-  font-size: 14px;
-  color: #555;
-}
+        .video-container video {
+            width: 100%;
+            display: block;
+        }
+        .video-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: rgba(0,0,0,0.3);
+            cursor: pointer;
+        }
+        .play-button {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background: rgba(230, 57, 70, 0.8);
+            border: none;
+            color: white;
+            font-size: 24px;
+            cursor: pointer;
+            transition: transform 0.2s;
+        }
+        .play-button:hover {
+            transform: scale(1.1);
+        }
+        .progress-container {
+            width: 100%;
+            height: 6px;
+            background: #f1f1f1;
+        }
+        .progress-bar {
+            height: 100%;
+            background: #e63946;
+            width: 0%;
+        }
+        .timer-display {
+            text-align: center;
+            margin-top: 5px;
+            font-size: 14px;
+            color: #555;
+            padding: 5px;
+            background: #f8f9fa;
+        }
+        .video-controls {
+            background: #f8f9fa;
+            padding: 10px;
+        }
     </style>
 </head>
 <body>
@@ -242,25 +240,28 @@ video {
         <div class="title">🔥 EBOOK "100+ RECEITAS MOÇAMBICANAS" 🔥</div>
         <div class="client-count">🚀 JÁ TRANSFORMOU A COZINHA DE 797 FAMÍLIAS!</div>
         
-      
+        <!-- Player de Vídeo Organizado -->
+        <div class="video-container">
+            <video id="localVideo">
+                <source src="20250331_132242.mp4" type="video/mp4">
+                Seu navegador não suporta o elemento de vídeo.
+            </video>
+            <div class="video-overlay">
+                <button id="playBtn" class="play-button">▶</button>
+            </div>
+            <div class="video-controls">
+                <div class="progress-container">
+                    <div id="progressBar" class="progress-bar"></div>
+                </div>
+                <div id="timerDisplay" class="timer-display">0:00 / 0:30</div>
+            </div>
+        </div>
 
-   <div class="video-container">
-  <video id="localVideo">
-    <source src="20250331_132242.mp4" type="video/mp4">
-  </video>
-  <div class="video-overlay">
-    <button id="playBtn" class="play-button">▶</button>
-  </div>
-  <div class="progress-container">
-    <div id="progressBar" class="progress-bar"></div>
-  </div>
-  <div id="timerDisplay" class="timer-display">0:00 / 0:30</div>
-</div>
-  <!-- Espaço para a primeira imagem -->
         <div class="image-container">
             <img src="a.png" alt="Receitas tradicionais moçambicanas">
         </div>
     </div>
+
     <div class="offer-box">
         <div class="timer" id="countdown">00:00:00</div>
         <div class="price">APENAS 260 MT!</div>
@@ -274,7 +275,6 @@ video {
         <div class="benefit-item"><strong>Mais que um Livro:</strong> Solução definitiva para variar seu cardápio e economizar</div>
     </div>
 
-    <!-- Espaço para a segunda imagem -->
     <div class="image-container">
         <img src="ug.png" alt="Exemplo de receitas do eBook">
     </div>
@@ -321,12 +321,11 @@ video {
     </div>
 
     <script>
-        // Set the date we're counting down to (tomorrow at midnight)
+        // Contador regressivo
         const countDownDate = new Date();
         countDownDate.setDate(countDownDate.getDate() + 1);
         countDownDate.setHours(0, 0, 0, 0);
 
-        // Update the count down every 1 second
         const x = setInterval(function() {
             const now = new Date().getTime();
             const distance = countDownDate - now;
@@ -337,8 +336,8 @@ video {
             
             document.querySelectorAll('.timer').forEach(element => {
                 element.innerHTML = hours.toString().padStart(2, '0') + ":" + 
-                                  minutes.toString().padStart(2, '0') + ":" + 
-                                  seconds.toString().padStart(2, '0');
+                                    minutes.toString().padStart(2, '0') + ":" + 
+                                    seconds.toString().padStart(2, '0');
             });
             
             if (distance < 0) {
@@ -352,45 +351,47 @@ video {
             }
         }, 1000);
 
-           const video = document.getElementById('localVideo');
-const playBtn = document.getElementById('playBtn');
-const progressBar = document.getElementById('progressBar');
-const timerDisplay = document.getElementById('timerDisplay');
-const totalTime = 30; // 30 segundos
+        // Controles do Player de Vídeo
+        const video = document.getElementById('localVideo');
+        const playBtn = document.getElementById('playBtn');
+        const progressBar = document.getElementById('progressBar');
+        const timerDisplay = document.getElementById('timerDisplay');
+        const totalTime = 30; // 30 segundos
 
-// Controle de play/pause
-playBtn.addEventListener('click', function() {
-  if (video.paused) {
-    video.play();
-    this.style.display = 'none';
-  }
-});
+        // Controle de play/pause
+        playBtn.addEventListener('click', function() {
+            if (video.paused) {
+                video.play();
+                this.style.display = 'none';
+            }
+        });
 
-video.addEventListener('click', function() {
-  if (video.paused) {
-    video.play();
-    playBtn.style.display = 'none';
-  } else {
-    video.pause();
-    playBtn.style.display = 'flex';
-  }
-});
+        video.addEventListener('click', function() {
+            if (video.paused) {
+                video.play();
+                playBtn.style.display = 'none';
+            } else {
+                video.pause();
+                playBtn.style.display = 'flex';
+            }
+        });
 
-// Barra de progresso
-video.addEventListener('timeupdate', function() {
-  const progress = (video.currentTime / totalTime) * 100;
-  progressBar.style.width = `${progress}%`;
-  
-  const currentSecs = Math.floor(video.currentTime);
-  timerDisplay.textContent = `0:${currentSecs < 10 ? '0' : ''}${currentSecs} / 0:30`;
-});
+        // Atualizar barra de progresso
+        video.addEventListener('timeupdate', function() {
+            const progress = (video.currentTime / totalTime) * 100;
+            progressBar.style.width = `${progress}%`;
+            
+            const currentSecs = Math.floor(video.currentTime);
+            timerDisplay.textContent = `0:${currentSecs < 10 ? '0' : ''}${currentSecs} / 0:30`;
+        });
 
-// Reset ao terminar
-video.addEventListener('ended', function() {
-  playBtn.style.display = 'flex';
-  progressBar.style.width = '0%';
-  timerDisplay.textContent = '0:00 / 0:30';
-});
+        // Reset ao terminar o vídeo
+        video.addEventListener('ended', function() {
+            playBtn.style.display = 'flex';
+            progressBar.style.width = '0%';
+            timerDisplay.textContent = '0:00 / 0:30';
+            video.currentTime = 0;
+        });
     </script>
 </body>
 </html>
