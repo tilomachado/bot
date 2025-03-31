@@ -240,22 +240,23 @@
         <div class="title">🔥 EBOOK "100+ RECEITAS MOÇAMBICANAS" 🔥</div>
         <div class="client-count">🚀 JÁ TRANSFORMOU A COZINHA DE 797 FAMÍLIAS!</div>
         
-        <!-- Player de Vídeo Organizado -->
-        <div class="video-container">
-            <video id="localVideo">
-                <source src="20250331_132242.mp4" type="video/mp4">
-                Seu navegador não suporta o elemento de vídeo.
-            </video>
-            <div class="video-overlay">
-                <button id="playBtn" class="play-button">▶</button>
-            </div>
-            <div class="video-controls">
-                <div class="progress-container">
-                    <div id="progressBar" class="progress-bar"></div>
-                </div>
-                <div id="timerDisplay" class="timer-display">0:00 / 0:30</div>
-            </div>
-        </div>
+       <div id="video-container">
+  <iframe 
+    width="315" 
+    height="560" 
+    src="https://www.youtube.com/embed/wqvK94DCmkI?controls=0" 
+    title="YouTube video player" 
+    frameborder="0" 
+    allow="accelerometer; autoplay;" 
+    allowfullscreen>
+  </iframe>
+</div>
+
+<script>
+  setTimeout(function() {
+    document.getElementById('video-container').style.display = 'none';
+  }, 80000); // 80 seconds = 1min 20s
+</script>
 
         <div class="image-container">
             <img src="a.png" alt="Receitas tradicionais moçambicanas">
@@ -282,7 +283,7 @@
     <div class="bonus">🎁 BÔNUS EXCLUSIVO: 10 Receitas Fitness (para manter a forma sem perder o sabor)!</div>
 
     <div class="testimonial">
-        "Antes eu só sabia fazer 3 pratos... Agora minha família pede até 'segunda' do caril novo que aprendi!" — Belucha, Maputo
+        "Antes eu só sabia fazer 3 pratos... Agora minha família pede até 'segunda' do caril novo que aprendi!" — Belucha, Nampula
     </div>
 
     <div class="image-container">
