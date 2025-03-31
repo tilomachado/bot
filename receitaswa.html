@@ -176,6 +176,65 @@
             border-radius: 8px;
             box-shadow: 0 4px 8px rgba(0,0,0,0.1);
         }
+           .video-container {
+  position: relative;
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+video {
+  width: 100%;
+  display: block;
+}
+
+.video-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(0,0,0,0.3);
+}
+
+.play-button {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: rgba(230, 57, 70, 0.8);
+  border: none;
+  color: white;
+  font-size: 24px;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.play-button:hover {
+  transform: scale(1.1);
+}
+
+.progress-container {
+  width: 100%;
+  height: 6px;
+  background: #f1f1f1;
+  margin-top: 10px;
+}
+
+.progress-bar {
+  height: 100%;
+  background: #e63946;
+  width: 0%;
+}
+
+.timer-display {
+  text-align: center;
+  margin-top: 5px;
+  font-size: 14px;
+  color: #555;
+}
     </style>
 </head>
 <body>
@@ -185,10 +244,18 @@
         
       
 
-    <!-- Player do YouTube Shorts (VLS) -->
-    <div class="video-container">
-        <iframe width="100%" height="400" src="https://www.youtube.com/embed/wqvK94DCmkI" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-    </div>
+   <div class="video-container">
+  <video id="localVideo">
+    <source src="20250331_132242.mp4" type="video/mp4">
+  </video>
+  <div class="video-overlay">
+    <button id="playBtn" class="play-button">▶</button>
+  </div>
+  <div class="progress-container">
+    <div id="progressBar" class="progress-bar"></div>
+  </div>
+  <div id="timerDisplay" class="timer-display">0:00 / 0:30</div>
+</div>
   <!-- Espaço para a primeira imagem -->
         <div class="image-container">
             <img src="a.png" alt="Receitas tradicionais moçambicanas">
@@ -284,6 +351,46 @@
                 });
             }
         }, 1000);
+
+           const video = document.getElementById('localVideo');
+const playBtn = document.getElementById('playBtn');
+const progressBar = document.getElementById('progressBar');
+const timerDisplay = document.getElementById('timerDisplay');
+const totalTime = 30; // 30 segundos
+
+// Controle de play/pause
+playBtn.addEventListener('click', function() {
+  if (video.paused) {
+    video.play();
+    this.style.display = 'none';
+  }
+});
+
+video.addEventListener('click', function() {
+  if (video.paused) {
+    video.play();
+    playBtn.style.display = 'none';
+  } else {
+    video.pause();
+    playBtn.style.display = 'flex';
+  }
+});
+
+// Barra de progresso
+video.addEventListener('timeupdate', function() {
+  const progress = (video.currentTime / totalTime) * 100;
+  progressBar.style.width = `${progress}%`;
+  
+  const currentSecs = Math.floor(video.currentTime);
+  timerDisplay.textContent = `0:${currentSecs < 10 ? '0' : ''}${currentSecs} / 0:30`;
+});
+
+// Reset ao terminar
+video.addEventListener('ended', function() {
+  playBtn.style.display = 'flex';
+  progressBar.style.width = '0%';
+  timerDisplay.textContent = '0:00 / 0:30';
+});
     </script>
 </body>
 </html>
