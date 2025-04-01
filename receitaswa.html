@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>100+ Receitas Moçambicanas - Oferta por Tempo Limitado!</title>
+    <title>+300 Receitas Moçambicanas e Estrangeiras - Oferta por Tempo Limitado!</title>
 
     <!-- Ícone do site -->
     <link rel="icon" href="icone.png" type="image/png">
@@ -181,57 +181,45 @@
             overflow: hidden;
             box-shadow: 0 4px 8px rgba(0,0,0,0.1);
         }
-        .video-container video {
+        .video-container iframe {
             width: 100%;
+            height: 450px;
             display: block;
         }
-        .video-overlay {
-            position: absolute;
-            top: 0;
-            left: 0;
+        .short-video-container {
+            position: relative;
             width: 100%;
-            height: 100%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            background: rgba(0,0,0,0.3);
-            cursor: pointer;
+            max-width: 350px;
+            margin: 25px auto;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
         }
-        .play-button {
-            width: 60px;
-            height: 60px;
-            border-radius: 50%;
-            background: rgba(230, 57, 70, 0.8);
-            border: none;
-            color: white;
-            font-size: 24px;
-            cursor: pointer;
-            transition: transform 0.2s;
-        }
-        .play-button:hover {
-            transform: scale(1.1);
-        }
-        .progress-container {
+        .short-video-container iframe {
             width: 100%;
-            height: 6px;
-            background: #f1f1f1;
+            height: 620px;
+            display: block;
         }
-        .progress-bar {
-            height: 100%;
-            background: #e63946;
-            width: 0%;
-        }
-        .timer-display {
+        .video-label {
             text-align: center;
-            margin-top: 5px;
-            font-size: 14px;
-            color: #555;
-            padding: 5px;
-            background: #f8f9fa;
+            font-weight: bold;
+            margin: 10px 0;
+            color: #e63946;
         }
-        .video-controls {
-            background: #f8f9fa;
-            padding: 10px;
+        .quiz-button {
+            display: inline-block;
+            background-color: #2a6496;
+            color: white;
+            padding: 12px 25px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            margin: 15px 0;
+            transition: background-color 0.3s;
+            font-size: 16px;
+        }
+        .quiz-button:hover {
+            background-color: #1d4b75;
         }
     </style>
 </head>
@@ -240,23 +228,15 @@
         <div class="title">🔥 EBOOK "100+ RECEITAS MOÇAMBICANAS" 🔥</div>
         <div class="client-count">🚀 JÁ TRANSFORMOU A COZINHA DE 797 FAMÍLIAS!</div>
         
-       <div id="video-container">
-  <iframe 
-    width="315" 
-    height="560" 
-    src="https://www.youtube.com/embed/wqvK94DCmkI?controls=0" 
-    title="YouTube video player" 
-    frameborder="0" 
-    allow="accelerometer; autoplay;" 
-    allowfullscreen>
-  </iframe>
-</div>
-
-<script>
-  setTimeout(function() {
-    document.getElementById('video-container').style.display = 'none';
-  }, 80000); // 80 seconds = 1min 20s
-</script>
+        <div class="video-container">
+            <iframe 
+                src="https://www.youtube.com/embed/wqvK94DCmkI?controls=0&autoplay=1&mute=1" 
+                title="YouTube video player" 
+                frameborder="0" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                allowfullscreen>
+            </iframe>
+        </div>
 
         <div class="image-container">
             <img src="a.png" alt="Receitas tradicionais moçambicanas">
@@ -265,7 +245,7 @@
 
     <div class="offer-box">
         <div class="timer" id="countdown">00:00:00</div>
-        <div class="price">APENAS 130 MT!</div>
+        <div class="price">APENAS 260 MT!</div>
         <div>(Preço sobe para 350 MT amanhã!)</div>
     </div>
 
@@ -274,6 +254,18 @@
         <div class="benefit-item"><strong>Resultados Comprovados:</strong> Centenas de moçambicanos já economizam e comem melhor TODOS os dias</div>
         <div class="benefit-item"><strong>Fácil de Preparar:</strong> Passo a passo simples, mesmo para iniciantes na cozinha</div>
         <div class="benefit-item"><strong>Mais que um Livro:</strong> Solução definitiva para variar seu cardápio e economizar</div>
+    </div>
+
+    <!-- Novo vídeo rápido do eBook por dentro -->
+    <div class="video-label">VEJA COMO É POR DENTRO DO EBOOK:</div>
+    <div class="short-video-container">
+        <iframe 
+            src="https://www.youtube.com/embed/9OU0BgzC7CE?controls=0&autoplay=1&mute=1" 
+            title="YouTube short video player" 
+            frameborder="0" 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+            allowfullscreen>
+        </iframe>
     </div>
 
     <div class="image-container">
@@ -298,6 +290,11 @@
         <img src="66.webp" alt="Exemplo de receitas do eBook">
     </div>
 
+    <!-- Botão do Quiz -->
+    <div style="text-align: center; margin: 30px 0;">
+        <a href="https://tilomachado.github.io/bot/receitas" class="quiz-button">FAÇA NOSSO QUIZ E DESCUBRA QUAL RECEITA COMBINA COM VOCÊ!</a>
+    </div>
+
     <div class="warning-box">
         <strong>⚠️ ATENÇÃO:</strong> A cada dia sem este eBook, você:<br>
         ✖ <strong>Gasta mais</strong> com comida sem graça<br>
@@ -312,7 +309,7 @@
     <div class="payment-steps">
         <p><strong>📩 COMO GARANTIR SEU EBOOK?</strong></p>
         <ol>
-            <li><strong>Envie 130 MT</strong> via M-Pesa para:
+            <li><strong>Envie 260 MT</strong> via M-Pesa para:
                 <ul>
                     <li>📌 877342804 (Belucha Joaquim Gregório)</li>
                     <li>📌 843343733 (Tilo Machado)</li>
@@ -364,47 +361,11 @@
             }
         }, 1000);
 
-        // Controles do Player de Vídeo
-        const video = document.getElementById('localVideo');
-        const playBtn = document.getElementById('playBtn');
-        const progressBar = document.getElementById('progressBar');
-        const timerDisplay = document.getElementById('timerDisplay');
-        const totalTime = 30; // 30 segundos
-
-        // Controle de play/pause
-        playBtn.addEventListener('click', function() {
-            if (video.paused) {
-                video.play();
-                this.style.display = 'none';
-            }
-        });
-
-        video.addEventListener('click', function() {
-            if (video.paused) {
-                video.play();
-                playBtn.style.display = 'none';
-            } else {
-                video.pause();
-                playBtn.style.display = 'flex';
-            }
-        });
-
-        // Atualizar barra de progresso
-        video.addEventListener('timeupdate', function() {
-            const progress = (video.currentTime / totalTime) * 100;
-            progressBar.style.width = `${progress}%`;
-            
-            const currentSecs = Math.floor(video.currentTime);
-            timerDisplay.textContent = `0:${currentSecs < 10 ? '0' : ''}${currentSecs} / 0:30`;
-        });
-
-        // Reset ao terminar o vídeo
-        video.addEventListener('ended', function() {
-            playBtn.style.display = 'flex';
-            progressBar.style.width = '0%';
-            timerDisplay.textContent = '0:00 / 0:30';
-            video.currentTime = 0;
-        });
+        // Esconder os vídeos após 80 segundos (1min 20s)
+        setTimeout(function() {
+            document.querySelector('.video-container').style.display = 'none';
+            document.querySelector('.short-video-container').style.display = 'none';
+        }, 80000);
     </script>
 </body>
 </html>
