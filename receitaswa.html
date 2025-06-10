@@ -54,203 +54,230 @@
     </noscript>
 
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 20px;
-            color: #333;
-        }
-        .header {
-            text-align: center;
-            margin-bottom: 20px;
-        }
-        .title {
-            color: #e63946;
-            font-size: 28px;
-            font-weight: bold;
-            margin-bottom: 10px;
-        }
-        .client-count {
-            background: #f8f9fa;
-            padding: 10px;
-            border-radius: 5px;
-            font-weight: bold;
-            margin-bottom: 20px;
-            display: inline-block;
-        }
-        .offer-box {
-            background-color: #fff8e1;
-            border: 2px dashed #e63946;
-            padding: 15px;
-            border-radius: 10px;
-            text-align: center;
-            margin: 20px 0;
-        }
-        .timer {
-            font-size: 24px;
-            font-weight: bold;
-            color: #e63946;
-            margin: 15px 0;
-        }
-        .cta-button {
-            display: inline-block;
-            background-color: #e63946;
-            color: white;
-            padding: 15px 30px;
-            text-decoration: none;
-            border-radius: 5px;
-            font-weight: bold;
-            margin: 20px 0;
-            transition: background-color 0.3s;
-            font-size: 18px;
-        }
-        .cta-button:hover {
-            background-color: #c1121f;
-        }
-        .benefits {
-            margin: 25px 0;
-        }
-        .benefit-item {
-            margin-bottom: 15px;
-            padding-left: 25px;
-            position: relative;
-            font-size: 16px;
-        }
-        .benefit-item:before {
-            content: "✓";
-            color: #e63946;
-            position: absolute;
-            left: 0;
-            font-weight: bold;
-            font-size: 20px;
-        }
-        .testimonial {
-            font-style: italic;
-            background-color: #f5f5f5;
-            padding: 15px;
-            border-radius: 5px;
-            margin: 25px 0;
-            border-left: 4px solid #e63946;
-        }
-        .price {
-            font-size: 32px;
-            font-weight: bold;
-            color: #e63946;
-            margin: 10px 0;
-        }
-        .bonus {
-            font-weight: bold;
-            color: #e63946;
-            font-size: 18px;
-            margin: 20px 0;
-            text-align: center;
-        }
-        .warning-box {
-            background-color: #ffebee;
-            padding: 15px;
-            border-radius: 5px;
-            margin: 20px 0;
-            border: 1px solid #e63946;
-        }
-        .payment-steps {
-            background: #f8f9fa;
-            padding: 15px;
-            border-radius: 5px;
-            margin: 20px 0;
-        }
-        .image-container {
-            text-align: center;
-            margin: 25px 0;
-        }
-        .image-container img {
-            max-width: 100%;
-            height: auto;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-        }
-        
-        /* Estilos do Player de Vídeo */
-        .video-container {
-            position: relative;
-            width: 100%;
-            max-width: 800px;
-            margin: 20px auto;
-            border-radius: 8px;
-            overflow: hidden;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-        }
-        .video-container iframe {
-            width: 100%;
-            height: 450px;
-            display: block;
-        }
-        .short-video-container {
-            position: relative;
-            width: 100%;
-            max-width: 350px;
-            margin: 25px auto;
-            border-radius: 8px;
-            overflow: hidden;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-        }
-        .short-video-container iframe {
-            width: 100%;
-            height: 620px;
-            display: block;
-        }
-        .video-label {
-            text-align: center;
-            font-weight: bold;
-            margin: 10px 0;
-            color: #e63946;
-        }
-        .quiz-button {
-            display: inline-block;
-            background-color: #2a6496;
-            color: white;
-            padding: 12px 25px;
-            text-decoration: none;
-            border-radius: 5px;
-            font-weight: bold;
-            margin: 15px 0;
-            transition: background-color 0.3s;
-            font-size: 16px;
-        }
-        .quiz-button:hover {
-            background-color: #1d4b75;
-        }
-        .demo-videos-container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 20px;
-            text-align: center;
-        }
+    body {
+        font-family: Arial, sans-serif;
+        line-height: 1.6;
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 20px;
+        color: #333;
+    }
+    .header {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+    .title {
+        color: #e63946;
+        font-size: 28px;
+        font-weight: bold;
+        margin-bottom: 10px;
+    }
+    .client-count {
+        background: #f8f9fa;
+        padding: 10px;
+        border-radius: 5px;
+        font-weight: bold;
+        margin-bottom: 20px;
+        display: inline-block;
+    }
+    .offer-box {
+        background-color: #fff8e1;
+        border: 2px dashed #e63946;
+        padding: 15px;
+        border-radius: 10px;
+        text-align: center;
+        margin: 20px 0;
+    }
+    .timer {
+        font-size: 24px;
+        font-weight: bold;
+        color: #e63946;
+        margin: 15px 0;
+    }
+    .cta-button {
+        display: inline-block;
+        background-color: #e63946;
+        color: white;
+        padding: 15px 30px;
+        text-decoration: none;
+        border-radius: 5px;
+        font-weight: bold;
+        margin: 20px 0;
+        transition: background-color 0.3s;
+        font-size: 18px;
+    }
+    .cta-button:hover {
+        background-color: #c1121f;
+    }
+    .benefits {
+        margin: 25px 0;
+    }
+    .benefit-item {
+        margin-bottom: 15px;
+        padding-left: 25px;
+        position: relative;
+        font-size: 16px;
+    }
+    .benefit-item:before {
+        content: "✓";
+        color: #e63946;
+        position: absolute;
+        left: 0;
+        font-weight: bold;
+        font-size: 20px;
+    }
+    .testimonial {
+        font-style: italic;
+        background-color: #f5f5f5;
+        padding: 15px;
+        border-radius: 5px;
+        margin: 25px 0;
+        border-left: 4px solid #e63946;
+    }
+    .price {
+        font-size: 32px;
+        font-weight: bold;
+        color: #e63946;
+        margin: 10px 0;
+    }
+    .bonus {
+        font-weight: bold;
+        color: #e63946;
+        font-size: 18px;
+        margin: 20px 0;
+        text-align: center;
+    }
+    .warning-box {
+        background-color: #ffebee;
+        padding: 15px;
+        border-radius: 5px;
+        margin: 20px 0;
+        border: 1px solid #e63946;
+    }
+    .payment-steps {
+        background: #f8f9fa;
+        padding: 15px;
+        border-radius: 5px;
+        margin: 20px 0;
+    }
+    .image-container {
+        text-align: center;
+        margin: 25px 0;
+    }
+    .image-container img {
+        max-width: 100%;
+        height: auto;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+    
+    /* Estilos do Player de Vídeo */
+    .video-container {
+        position: relative;
+        width: 100%;
+        max-width: 800px;
+        margin: 20px auto;
+        border-radius: 8px;
+        overflow: hidden;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+    .video-container iframe {
+        width: 100%;
+        height: 450px;
+        display: block;
+    }
+    .short-video-container {
+        position: relative;
+        width: 100%;
+        max-width: 350px;
+        margin: 25px auto;
+        border-radius: 8px;
+        overflow: hidden;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+    .short-video-container iframe {
+        width: 100%;
+        height: 620px;
+        display: block;
+    }
+    .video-label {
+        text-align: center;
+        font-weight: bold;
+        margin: 10px 0;
+        color: #e63946;
+    }
+    .quiz-button {
+        display: inline-block;
+        background-color: #2a6496;
+        color: white;
+        padding: 12px 25px;
+        text-decoration: none;
+        border-radius: 5px;
+        font-weight: bold;
+        margin: 15px 0;
+        transition: background-color 0.3s;
+        font-size: 16px;
+    }
+    .quiz-button:hover {
+        background-color: #1d4b75;
+    }
+    .demo-videos-container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 20px;
+        text-align: center;
+    }
 
-        .demo-videos-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 20px;
-            margin-top: 30px;
-        }
+    .demo-videos-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 20px;
+        margin-top: 30px;
+    }
 
-        .demo-video {
-            position: relative;
-            padding-bottom: 177.78%; /* Proporção 16:9 para vertical (9:16) */
-            height: 0;
-            overflow: hidden;
-        }
+    .demo-video {
+        position: relative;
+        padding-bottom: 177.78%; /* Proporção 16:9 para vertical (9:16) */
+        height: 0;
+        overflow: hidden;
+    }
 
-        .demo-video iframe {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            border-radius: 8px;
-        }
-    </style>
+    .demo-video iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border-radius: 8px;
+    }
+    
+    .country-price {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        margin: 15px 0;
+        flex-wrap: wrap;
+    }
+    
+    .price-box {
+        background: #f0f0f0;
+        padding: 15px;
+        border-radius: 8px;
+        text-align: center;
+        min-width: 150px;
+    }
+    
+    .price-box h4 {
+        margin: 0 0 10px 0;
+        color: #e63946;
+    }
+    
+    .price-box .value {
+        font-size: 24px;
+        font-weight: bold;
+        color: #e63946;
+    }
+</style>
 </head>
 <body>
     <div class="header">
